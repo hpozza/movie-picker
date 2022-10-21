@@ -10,7 +10,7 @@ import { MovieService } from '../services/movie.service';
 })
 export class MovieListComponent implements OnInit {
 
-  movies$?: Observable<Movie[]>
+  movies$!: Observable<Movie[]>
   constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
