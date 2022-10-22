@@ -1,0 +1,21 @@
+img {
+    max-width: 300px;
+    height: auto;
+
+    @media(max-width: 640px) {
+        max-width: 200px;
+        height: auto;
+    }
+}
+
+div {
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.movie-info {
+    margin-top: 5px;
+    font-size: 10px;
+}
