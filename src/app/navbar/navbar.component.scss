@@ -1,6 +1,24 @@
 nav {
     background: linear-gradient(to right, #ff8400e7, #ffe100e9);
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    font-size: 18px;
+    color: white;
+    margin-right: 15px;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    border: 0px;
+
+    &:hover {
+        background: linear-gradient(to right, rgb(7, 177, 10), rgb(6, 224, 9));
+    }
 }
 
 h1 {
