@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { NavbarService } from 'src/app/navbar/services/navbar.service';
 import { Movie } from '../models/movie.model';
 import { MovieService } from '../services/movie.service';
 
@@ -11,10 +12,11 @@ import { MovieService } from '../services/movie.service';
 export class MovieListComponent implements OnInit {
 
   movies$!: Observable<Movie[]>
-  constructor(private movieService: MovieService) { }
+  constructor(private movieService: MovieService, private navbarService: NavbarService) { }
 
   ngOnInit(): void {
-    this.movies$ = this.movieService.getMovies();
+    this.movies$ = this.movieService.getMoviesFromHttp();
+    this.navbarService.title?.next('Movie Picker');
   }
 
 }

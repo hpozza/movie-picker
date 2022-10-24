@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { NavbarService } from 'src/app/navbar/services/navbar.service';
 import { Movie } from '../models/movie.model';
 import { MovieService } from '../services/movie.service';
 
@@ -11,7 +12,11 @@ import { MovieService } from '../services/movie.service';
 })
 export class MovieDetailComponent implements OnInit, OnDestroy {
 
-  constructor(private movieService: MovieService, private route: ActivatedRoute) { }
+  constructor(
+    private movieService: MovieService,
+    private route: ActivatedRoute,
+    private navbarService: NavbarService
+    ) { }
 
   id?: any;
   movie?: Movie;
@@ -20,8 +25,9 @@ export class MovieDetailComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.id = +this.route.snapshot.paramMap.get('id')!
 
-    this.movieSub$ = this.movieService.movie(this.id).subscribe(movie => {
+    this.movieSub$ = this.movieService.moviesFromHttp(this.id).subscribe(movie => {
       this.movie = movie;
+      this.navbarService.title?.next(movie!.title)
     })
   }
 

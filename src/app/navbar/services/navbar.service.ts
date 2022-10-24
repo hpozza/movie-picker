@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NavbarService {
 
-  constructor() { }
+  title?: BehaviorSubject<string>;
+
+  constructor() {
+    this.title = new BehaviorSubject('Movie Picker')
+  }
 }
