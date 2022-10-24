@@ -6,7 +6,8 @@ import { Movie, movies } from '../models/movie.model';
 @Injectable({
   providedIn: 'root'
 })
-export class MovieService {
+export class 
+MovieService {
 
   private ROOT_URL = 'http://localhost:3000/movies';
 
@@ -14,6 +15,10 @@ export class MovieService {
 
   getMoviesFromHttp() {
     return this.http.get<Movie[]>(this.ROOT_URL)
+  }
+
+  addMovie(movie: Movie) {
+    return this.http.post(this.ROOT_URL, movie)
   }
 
   moviesFromHttp(id: any) {
@@ -26,7 +31,7 @@ export class MovieService {
 
   movie(id : number) {
     return of(
-      movies.find(movie => +movie.id === +id)
+      movies.find(movie => +Number(movie.id) === +id)
     )
   }
 }

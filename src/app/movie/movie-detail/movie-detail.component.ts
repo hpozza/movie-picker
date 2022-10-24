@@ -18,12 +18,12 @@ export class MovieDetailComponent implements OnInit, OnDestroy {
     private navbarService: NavbarService
     ) { }
 
-  id?: any;
+  id?: number;
   movie?: Movie;
   movieSub$?: Subscription;
 
   ngOnInit(): void {
-    this.id = +this.route.snapshot.paramMap.get('id')!
+    this.id = +Number(this.route.snapshot.paramMap.get('id'))!
 
     this.movieSub$ = this.movieService.moviesFromHttp(this.id).subscribe(movie => {
       this.movie = movie;

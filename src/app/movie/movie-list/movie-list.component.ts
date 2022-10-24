@@ -19,4 +19,8 @@ export class MovieListComponent implements OnInit {
     this.navbarService.title?.next('Movie Picker');
   }
 
+  string(str: number) {
+    return str.toString()
+  }
+
 }
