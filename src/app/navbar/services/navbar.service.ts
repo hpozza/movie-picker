@@ -9,6 +9,6 @@ export class NavbarService {
   title?: BehaviorSubject<string>;
 
   constructor() {
-    this.title = new BehaviorSubject('Movie Picker')
+    this.title = new BehaviorSubject("HENRIQUE'S MOVIE RATER")
   }
 }

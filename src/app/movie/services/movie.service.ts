@@ -21,6 +21,10 @@ MovieService {
     return this.http.post(this.ROOT_URL, movie)
   }
 
+  deleteMovie(id: number) {
+    return this.http.delete(`${this.ROOT_URL}/${id}`)
+  }
+
   moviesFromHttp(id: any) {
     return this.http.get<Movie>(`${this.ROOT_URL}/${id}`)
   }

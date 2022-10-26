@@ -16,7 +16,8 @@ export class AddMovieComponent implements OnInit {
     title: new FormControl('', [Validators.required]),
     image: new FormControl('', [Validators.required]),
     releaseYear: new FormControl('', [Validators.required]),
-    genre: new FormControl('', [Validators.required])
+    genre: new FormControl('', [Validators.required]),
+    review: new FormControl('', [Validators.nullValidator])
   });
 
   constructor(

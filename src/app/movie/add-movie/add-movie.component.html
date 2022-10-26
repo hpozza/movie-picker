@@ -1,1 +1,9 @@
-<p>add-movie works!</p>
+<form [formGroup]="movieForm" (ngSubmit)="addMovie()" >
+    <input type="text" placeholder="Title" formControlName="title" />
+    <input type="text" placeholder="Genre" formControlName="genre" />
+    <input type="text" placeholder="Release Year" formControlName="releaseYear" />
+    <input type="text" placeholder="Image URL" formControlName="image" />
+    <input type="text" placeholder="Review" formControlName="review" class="review-text" />
+
+    <button [disabled]="!movieForm.valid" type="submit" >Add Movie</button>
+</form>

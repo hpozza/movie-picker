@@ -4,6 +4,7 @@ export interface Movie {
     genre: string;
     releaseYear: string;
     image: string;
+    review?: string;
 }
 
 export const movies: Movie[] = [

@@ -4,5 +4,7 @@
         <h1>Title: {{movie!.title}}</h1>
         <h1>Year: {{movie!.releaseYear}}</h1>
         <h1>Genre: {{movie!.genre}}</h1>
+        <h1 *ngIf="movie?.review" >Review: {{movie!.review}} </h1>
+        <button (click)="deleteMovie(movie!.id)">DELETE</button>
     </div>
 </div>
