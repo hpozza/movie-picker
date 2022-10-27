@@ -19,3 +19,13 @@ div {
     margin-top: 5px;
     font-size: 10px;
 }
+
+.options {
+    position: absolute;
+    margin-top: 5px;
+    color: #1d2424;
+    &:hover {
+        color:orange;
+        text-shadow: 5px orange;
+    }
+}
