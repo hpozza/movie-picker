@@ -31,4 +31,8 @@ button {
 
 .review-text {
     height: 150px;
+    &::placeholder {
+        right: 200px;
+
+    }
 }

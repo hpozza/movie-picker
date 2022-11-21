@@ -1,3 +1,4 @@
+import { AppMaterialModule } from './shared/app-material/app-material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MovieListComponent } from './movie-list/movie-list.component';
@@ -6,8 +7,8 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MovieComponent } from './movie/movie.component';
 import { AddMovieComponent } from './add-movie/add-movie.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatIconModule } from '@angular/material/icon'
-import { MatSelectModule } from '@angular/material/select'
+import { OptionsDialogComponent } from './shared/options-dialog/options-dialog.component';
+import { DeleteDialogComponent } from './shared/delete-dialog/delete-dialog.component';
 
 
 
@@ -16,14 +17,15 @@ import { MatSelectModule } from '@angular/material/select'
     MovieListComponent,
     MovieDetailComponent,
     MovieComponent,
-    AddMovieComponent
+    AddMovieComponent,
+    OptionsDialogComponent,
+    DeleteDialogComponent
   ],
   imports: [
     CommonModule,
     MovieRoutingModule,
     ReactiveFormsModule,
-    MatIconModule,
-    MatSelectModule
+    AppMaterialModule
   ]
 })
 export class MovieModule { }

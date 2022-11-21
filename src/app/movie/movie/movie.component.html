@@ -1,14 +1,12 @@
-<div>
+<div class="main-container">
     <div>
-            <mat-icon class="options" (click)="onClick($event)" >more_vert</mat-icon>
-
-        <img [src]="movie!.image">
+        <mat-icon class="options" (click)="openDialog()">more_vert</mat-icon>
+        <img class="image" [src]="movie!.image">
     </div>
     <div class="movie-info">
         <h1>Title: {{movie!.title}}</h1>
         <h1>Year: {{movie!.releaseYear}}</h1>
         <h1>Genre: {{movie!.genre}}</h1>
-        <h1 *ngIf="movie?.review" >Review: {{movie!.review}} </h1>
-        <button (click)="deleteMovie(movie!.id)">DELETE</button>
+        <h1 *ngIf="movie?.review">Review: {{movie!.review}} </h1>
     </div>
 </div>
