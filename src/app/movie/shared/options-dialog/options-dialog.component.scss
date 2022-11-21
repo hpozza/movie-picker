@@ -1,0 +1,35 @@
+.dialog-panel {
+  min-width: 500px;
+  min-height: 300px;
+  padding: 20px 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+
+.destroy-btn {
+  background: linear-gradient(to right, #ff0000dd, #ff5912);
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px;
+
+  &:hover {
+      background: linear-gradient(to right, rgb(255, 121, 18), rgb(224, 155, 6));
+  }
+}
+
+.delete-btn {
+  background: linear-gradient(to right, #ff0000dd, #ff5912);
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px;
+  margin-top: auto;
+
+  &:hover {
+      background: linear-gradient(to right, rgb(255, 121, 18), rgb(224, 155, 6));
+  }
+}
